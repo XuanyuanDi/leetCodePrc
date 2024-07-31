@@ -41,15 +41,15 @@ public class DuplicateNumsInArray {
                     return  nums[i];
                 }
                 swap(nums, i, nums[i]);
-                for (int in : nums) {
+                /*for (int in : nums) {
                     System.out.printf("%d ",in);
                 }
-                System.out.println();
+                System.out.println();*/
             }
             swap(nums, i, nums[i]);
-            for (int in2 : nums) {
+            /*for (int in2 : nums) {
                 System.out.printf("%d ",in2);
-            }
+            }*/
         }
         return -1;
     }
