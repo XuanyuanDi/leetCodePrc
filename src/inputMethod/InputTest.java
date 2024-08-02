@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class InputTest {
     public static void main(String[] args) {
-        input9();
+        input10();
     }
 
     /**
@@ -276,6 +276,22 @@ public class InputTest {
      * nowcoder
      */
     public static void input10() {
-        //TODO
+        Scanner in = new Scanner(System.in);
+
+        while (in.hasNextLine()) {
+            String line = in.nextLine();
+            if ("".equals(line.trim())) {
+                return;
+            }
+            String[] strs = line.trim().split(",");
+            Arrays.sort(strs);
+            for (int i = 0; i < strs.length; i++) {
+                System.out.printf("%s", strs[i]);
+                if (i != strs.length - 1) {
+                    System.out.print(",");
+                }
+            }
+            System.out.println();
+        }
     }
 }
