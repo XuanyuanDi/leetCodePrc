@@ -6,7 +6,7 @@ package doublePointer;
  */
 public class LastMountain {
     public static void main(String[] args) {
-        int[] arr = {2,1,4,7,3,2,5};
+        int[] arr = {2,1,4,5,3,2,5};
         System.out.println(longestMountain(arr));
     }
 
@@ -18,15 +18,15 @@ public class LastMountain {
             int right = left + 1;
             if (arr[left] < arr[left + 1]) {
                 while (right + 1 < n && arr[right] < arr[right + 1]) {
-                    ++right;
+                    right++;
                 }
-                if (right < n - 1 && arr[right] > arr[right + 1]) {
+                if (right < n-1 && arr[right] > arr[right + 1]) {
                     while (right + 1 < n && arr[right] > arr[right + 1]) {
-                        ++right;
+                        right++;
                     }
                     ans = Math.max(ans, right - left + 1);
                 } else {
-                    ++right;
+                    right++;
                 }
             }
             left = right;
